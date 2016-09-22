@@ -1,0 +1,951 @@
+[0;36mDebug: Applying settings catalog for sections main, agent, ssl[0m
+[0;36mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppetlabs/puppet]{:path=>"/etc/puppetlabs/puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'codedir': 'File[/etc/puppetlabs/code]{:path=>"/etc/puppetlabs/code", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Facter: searching for custom fact "operatingsystem".[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: fact "facterversion" has resolved to "3.4.1".[0m
+[0;36mDebug: Facter: fact "aio_agent_version" has resolved to "1.6.2".[0m
+[0;36mDebug: Facter: searching "/opt/puppetlabs/facter/facts.d" for external facts.[0m
+[0;36mDebug: Facter: skipping external facts for "/etc/facter/facts.d": No such file or directory[0m
+[0;36mDebug: Facter: skipping external facts for "/etc/puppetlabs/facter/facts.d": No such file or directory[0m
+[0;36mDebug: Facter: no external facts were found.[0m
+[0;36mDebug: Facter: resolving operating system facts.[0m
+[0;36mDebug: Facter: resolving kernel facts.[0m
+[0;36mDebug: Facter: fact "kernel" has resolved to "Linux".[0m
+[0;36mDebug: Facter: fact "kernelrelease" has resolved to "2.6.32-573.18.1.el6.x86_64".[0m
+[0;36mDebug: Facter: fact "kernelmajversion" has resolved to "2.6".[0m
+[0;36mDebug: Facter: fact "kernelversion" has resolved to "2.6.32".[0m
+[0;36mDebug: Facter: executing command: lsb_release -a[0m
+[0;36mDebug: Facter: lsb_release was not found on the PATH.[0m
+[0;36mDebug: Facter: fact "osfamily" has resolved to "RedHat".[0m
+[0;36mDebug: Facter: fact "operatingsystemmajrelease" has resolved to "6".[0m
+[0;36mDebug: Facter: fact "operatingsystemrelease" has resolved to "6.7".[0m
+[0;36mDebug: Facter: fact "hardwaremodel" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "architecture" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "operatingsystem" has resolved to "CentOS".[0m
+[0;36mDebug: Facter: fact "selinux" has resolved to false.[0m
+[0;36mDebug: Facter: fact "os" has resolved to {
+  architecture => "x86_64",
+  family => "RedHat",
+  hardware => "x86_64",
+  name => "CentOS",
+  release => {
+    full => "6.7",
+    major => "6",
+    minor => "7"
+  },
+  selinux => {
+    enabled => false
+  }
+}.[0m
+[0;36mDebug: Failed to load library 'cfpropertylist' for feature 'cfpropertylist'[0m
+[0;36mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[0m
+[0;36mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[0m
+[0;36mDebug: Failed to load library 'ldap' for feature 'ldap'[0m
+[0;36mDebug: Puppet::Type::User::ProviderLdap: feature ldap is missing[0m
+[0;36mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[0m
+[0;36mDebug: Failed to load library 'cfpropertylist' for feature 'cfpropertylist'[0m
+[0;36mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[0m
+[0;36mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[0m
+[0;36mDebug: Failed to load library 'ldap' for feature 'ldap'[0m
+[0;36mDebug: Puppet::Type::Group::ProviderLdap: feature ldap is missing[0m
+[0;36mDebug: Using settings: adding file resource 'vardir': 'File[/opt/puppetlabs/puppet/cache]{:path=>"/opt/puppetlabs/puppet/cache", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'logdir': 'File[/var/log/puppetlabs/puppet]{:path=>"/var/log/puppetlabs/puppet", :mode=>"750", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'statedir': 'File[/opt/puppetlabs/puppet/cache/state]{:path=>"/opt/puppetlabs/puppet/cache/state", :mode=>"1755", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'rundir': 'File[/var/run/puppetlabs]{:path=>"/var/run/puppetlabs", :mode=>"755", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'libdir': 'File[/opt/puppetlabs/puppet/cache/lib]{:path=>"/opt/puppetlabs/puppet/cache/lib", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'hiera_config': 'File[/etc/puppetlabs/puppet/hiera.yaml]{:path=>"/etc/puppetlabs/puppet/hiera.yaml", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'preview_outputdir': 'File[/opt/puppetlabs/puppet/cache/preview]{:path=>"/opt/puppetlabs/puppet/cache/preview", :mode=>"750", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppetlabs/puppet/ssl/certs]{:path=>"/etc/puppetlabs/puppet/ssl/certs", :mode=>"755", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppetlabs/puppet/ssl]{:path=>"/etc/puppetlabs/puppet/ssl", :mode=>"771", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppetlabs/puppet/ssl/public_keys]{:path=>"/etc/puppetlabs/puppet/ssl/public_keys", :mode=>"755", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppetlabs/puppet/ssl/certificate_requests]{:path=>"/etc/puppetlabs/puppet/ssl/certificate_requests", :mode=>"755", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppetlabs/puppet/ssl/private_keys]{:path=>"/etc/puppetlabs/puppet/ssl/private_keys", :mode=>"750", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppetlabs/puppet/ssl/private]{:path=>"/etc/puppetlabs/puppet/ssl/private", :mode=>"750", :owner=>"root", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Facter: searching for custom fact "hostname".[0m
+[0;36mDebug: Facter: searching for hostname.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for hostname.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: resolving networking facts.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip route show[0m
+[0;36mDebug: Facter: 192.168.100.0/24 dev eth1  proto kernel  scope link  src 192.168.100.118[0m
+[0;36mDebug: Facter: 10.0.2.0/24 dev eth0  proto kernel  scope link  src 10.0.2.15[0m
+[0;36mDebug: Facter: 169.254.0.0/16 dev eth0  scope link  metric 1002[0m
+[0;36mDebug: Facter: 169.254.0.0/16 dev eth1  scope link  metric 1003[0m
+[0;36mDebug: Facter: default via 10.0.2.2 dev eth0[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip -6 route show[0m
+[0;36mDebug: Facter: unreachable ::/96 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable ::ffff:0.0.0.0/96 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:a00::/24 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:7f00::/24 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:a9fe::/32 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:ac10::/28 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:c0a8::/32 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:e000::/19 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 3ffe:ffff::/32 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: fe80::/64 dev eth0  proto kernel  metric 256  mtu 1500 advmss 1440 hoplimit 4294967295[0m
+[0;36mDebug: Facter: fe80::/64 dev eth1  proto kernel  metric 256  mtu 1500 advmss 1440 hoplimit 4294967295[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: hostname "puppetnode" could not be resolved: hostname may not be externally resolvable.[0m
+[0;36mDebug: Facter: searching "/var/lib/dhclient" for dhclient lease files.[0m
+[0;36mDebug: Facter: reading "/var/lib/dhclient/dhclient-eth0.leases" for dhclient lease information.[0m
+[0;36mDebug: Facter: searching "/var/lib/dhcp" for dhclient lease files.[0m
+[0;36mDebug: Facter: searching "/var/lib/dhcp3" for dhclient lease files.[0m
+[0;36mDebug: Facter: searching "/var/lib/NetworkManager" for dhclient lease files.[0m
+[0;36mDebug: Facter: searching "/var/db" for dhclient lease files.[0m
+[0;36mDebug: Facter: executing command: dhcpcd -U eth1[0m
+[0;36mDebug: Facter: dhcpcd was not found on the PATH.[0m
+[0;36mDebug: Facter: executing command: dhcpcd -U lo[0m
+[0;36mDebug: Facter: dhcpcd was not found on the PATH.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip link show eth0[0m
+[0;36mDebug: Facter: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000[0m
+[0;36mDebug: Facter: link/ether 08:00:27:b4:16:15 brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip link show eth1[0m
+[0;36mDebug: Facter: 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000[0m
+[0;36mDebug: Facter: link/ether 08:00:27:f6:e0:0d brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip link show lo[0m
+[0;36mDebug: Facter: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN[0m
+[0;36mDebug: Facter: link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "ipaddress_eth0" has resolved to "10.0.2.15".[0m
+[0;36mDebug: Facter: fact "ipaddress" has resolved to "10.0.2.15".[0m
+[0;36mDebug: Facter: fact "netmask_eth0" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "netmask" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "network_eth0" has resolved to "10.0.2.0".[0m
+[0;36mDebug: Facter: fact "network" has resolved to "10.0.2.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_eth0" has resolved to "fe80::a00:27ff:feb4:1615".[0m
+[0;36mDebug: Facter: fact "ipaddress6" has resolved to "fe80::a00:27ff:feb4:1615".[0m
+[0;36mDebug: Facter: fact "netmask6_eth0" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "netmask6" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "network6_eth0" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "network6" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "macaddress_eth0" has resolved to "08:00:27:b4:16:15".[0m
+[0;36mDebug: Facter: fact "macaddress" has resolved to "08:00:27:b4:16:15".[0m
+[0;36mDebug: Facter: fact "mtu_eth0" has resolved to 1500.[0m
+[0;36mDebug: Facter: fact "ipaddress_eth1" has resolved to "192.168.100.118".[0m
+[0;36mDebug: Facter: fact "netmask_eth1" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "network_eth1" has resolved to "192.168.100.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_eth1" has resolved to "fe80::a00:27ff:fef6:e00d".[0m
+[0;36mDebug: Facter: fact "netmask6_eth1" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "network6_eth1" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "macaddress_eth1" has resolved to "08:00:27:f6:e0:0d".[0m
+[0;36mDebug: Facter: fact "mtu_eth1" has resolved to 1500.[0m
+[0;36mDebug: Facter: fact "ipaddress_lo" has resolved to "127.0.0.1".[0m
+[0;36mDebug: Facter: fact "netmask_lo" has resolved to "255.0.0.0".[0m
+[0;36mDebug: Facter: fact "network_lo" has resolved to "127.0.0.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_lo" has resolved to "::1".[0m
+[0;36mDebug: Facter: fact "netmask6_lo" has resolved to "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff".[0m
+[0;36mDebug: Facter: fact "network6_lo" has resolved to "::1".[0m
+[0;36mDebug: Facter: fact "mtu_lo" has resolved to 65536.[0m
+[0;36mDebug: Facter: fact "hostname" has resolved to "puppetnode".[0m
+[0;36mDebug: Facter: fact "domain" has resolved to "minsk.epam.com".[0m
+[0;36mDebug: Facter: fact "fqdn" has resolved to "puppetnode.minsk.epam.com".[0m
+[0;36mDebug: Facter: fact "interfaces" has resolved to "eth0,eth1,lo".[0m
+[0;36mDebug: Facter: fact "dhcp_servers" has resolved to {
+  eth0 => "10.0.2.2",
+  system => "10.0.2.2"
+}.[0m
+[0;36mDebug: Facter: fact "networking" has resolved to {
+  dhcp => "10.0.2.2",
+  domain => "minsk.epam.com",
+  fqdn => "puppetnode.minsk.epam.com",
+  hostname => "puppetnode",
+  interfaces => {
+    eth0 => {
+      bindings => [
+        {
+          address => "10.0.2.15",
+          netmask => "255.255.255.0",
+          network => "10.0.2.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::a00:27ff:feb4:1615",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      dhcp => "10.0.2.2",
+      ip => "10.0.2.15",
+      ip6 => "fe80::a00:27ff:feb4:1615",
+      mac => "08:00:27:b4:16:15",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "10.0.2.0",
+      network6 => "fe80::"
+    },
+    eth1 => {
+      bindings => [
+        {
+          address => "192.168.100.118",
+          netmask => "255.255.255.0",
+          network => "192.168.100.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::a00:27ff:fef6:e00d",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      ip => "192.168.100.118",
+      ip6 => "fe80::a00:27ff:fef6:e00d",
+      mac => "08:00:27:f6:e0:0d",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "192.168.100.0",
+      network6 => "fe80::"
+    },
+    lo => {
+      bindings => [
+        {
+          address => "127.0.0.1",
+          netmask => "255.0.0.0",
+          network => "127.0.0.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "::1",
+          netmask => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          network => "::1"
+        }
+      ],
+      ip => "127.0.0.1",
+      ip6 => "::1",
+      mtu => 65536,
+      netmask => "255.0.0.0",
+      netmask6 => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      network => "127.0.0.0",
+      network6 => "::1"
+    }
+  },
+  ip => "10.0.2.15",
+  ip6 => "fe80::a00:27ff:feb4:1615",
+  mac => "08:00:27:b4:16:15",
+  mtu => 1500,
+  netmask => "255.255.255.0",
+  netmask6 => "ffff:ffff:ffff:ffff::",
+  network => "10.0.2.0",
+  network6 => "fe80::",
+  primary => "eth0"
+}.[0m
+[0;36mDebug: Facter: searching for custom fact "domain".[0m
+[0;36mDebug: Facter: searching for domain.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for domain.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Using settings: adding file resource 'hostcert': 'File[/etc/puppetlabs/puppet/ssl/certs/puppetnode.minsk.epam.com.pem]{:path=>"/etc/puppetlabs/puppet/ssl/certs/puppetnode.minsk.epam.com.pem", :mode=>"644", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'hostprivkey': 'File[/etc/puppetlabs/puppet/ssl/private_keys/puppetnode.minsk.epam.com.pem]{:path=>"/etc/puppetlabs/puppet/ssl/private_keys/puppetnode.minsk.epam.com.pem", :mode=>"640", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'hostpubkey': 'File[/etc/puppetlabs/puppet/ssl/public_keys/puppetnode.minsk.epam.com.pem]{:path=>"/etc/puppetlabs/puppet/ssl/public_keys/puppetnode.minsk.epam.com.pem", :mode=>"644", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'localcacert': 'File[/etc/puppetlabs/puppet/ssl/certs/ca.pem]{:path=>"/etc/puppetlabs/puppet/ssl/certs/ca.pem", :mode=>"644", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'hostcrl': 'File[/etc/puppetlabs/puppet/ssl/crl.pem]{:path=>"/etc/puppetlabs/puppet/ssl/crl.pem", :mode=>"644", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'statefile': 'File[/opt/puppetlabs/puppet/cache/state/state.yaml]{:path=>"/opt/puppetlabs/puppet/cache/state/state.yaml", :mode=>"660", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'transactionstorefile': 'File[/opt/puppetlabs/puppet/cache/state/transactionstore.yaml]{:path=>"/opt/puppetlabs/puppet/cache/state/transactionstore.yaml", :mode=>"660", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'clientyamldir': 'File[/opt/puppetlabs/puppet/cache/client_yaml]{:path=>"/opt/puppetlabs/puppet/cache/client_yaml", :mode=>"750", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'client_datadir': 'File[/opt/puppetlabs/puppet/cache/client_data]{:path=>"/opt/puppetlabs/puppet/cache/client_data", :mode=>"750", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'classfile': 'File[/opt/puppetlabs/puppet/cache/state/classes.txt]{:path=>"/opt/puppetlabs/puppet/cache/state/classes.txt", :mode=>"640", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'resourcefile': 'File[/opt/puppetlabs/puppet/cache/state/resources.txt]{:path=>"/opt/puppetlabs/puppet/cache/state/resources.txt", :mode=>"640", :owner=>"root", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/opt/puppetlabs/puppet/cache/clientbucket]{:path=>"/opt/puppetlabs/puppet/cache/clientbucket", :mode=>"750", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'lastrunfile': 'File[/opt/puppetlabs/puppet/cache/state/last_run_summary.yaml]{:path=>"/opt/puppetlabs/puppet/cache/state/last_run_summary.yaml", :mode=>"644", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'lastrunreport': 'File[/opt/puppetlabs/puppet/cache/state/last_run_report.yaml]{:path=>"/opt/puppetlabs/puppet/cache/state/last_run_report.yaml", :mode=>"640", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'graphdir': 'File[/opt/puppetlabs/puppet/cache/state/graphs]{:path=>"/opt/puppetlabs/puppet/cache/state/graphs", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/opt/puppetlabs/puppet/cache/facts.d]{:path=>"/opt/puppetlabs/puppet/cache/facts.d", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'[0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/lib]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/hiera.yaml]: Adding autorequire relationship with File[/etc/puppetlabs/puppet][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/preview]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/certs]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl]: Adding autorequire relationship with File[/etc/puppetlabs/puppet][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/public_keys]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/certificate_requests]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/private_keys]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/private]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/certs/puppetnode.minsk.epam.com.pem]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl/certs][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/private_keys/puppetnode.minsk.epam.com.pem]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl/private_keys][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/public_keys/puppetnode.minsk.epam.com.pem]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl/public_keys][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/certs/ca.pem]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl/certs][0m
+[0;36mDebug: /File[/etc/puppetlabs/puppet/ssl/crl.pem]: Adding autorequire relationship with File[/etc/puppetlabs/puppet/ssl][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/state.yaml]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/transactionstore.yaml]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/client_yaml]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/client_data]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/classes.txt]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/resources.txt]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/clientbucket]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/last_run_summary.yaml]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/last_run_report.yaml]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/state/graphs]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache/state][0m
+[0;36mDebug: /File[/opt/puppetlabs/puppet/cache/facts.d]: Adding autorequire relationship with File[/opt/puppetlabs/puppet/cache][0m
+[0;36mDebug: Finishing transaction 23286180[0m
+[0;36mDebug: Runtime environment: puppet_version=4.6.2, ruby_version=2.1.9, run_mode=agent, default_encoding=UTF-8[0m
+[0;36mDebug: Using cached certificate for ca[0m
+[0;36mDebug: Using cached certificate for puppetnode.minsk.epam.com[0m
+[0;36mDebug: Loaded state in 0.02 seconds[0m
+[0;36mDebug: Dynamically-bound server lookup failed, falling back to server setting[0m
+[0;36mDebug: Dynamically-bound port lookup failed; falling back to masterport setting[0m
+[0;36mDebug: Failed to load library 'msgpack' for feature 'msgpack'[0m
+[0;36mDebug: Puppet::Network::Format[msgpack]: feature msgpack is missing[0m
+[0;36mDebug: node supports formats: pson yaml binary[0m
+[0;36mDebug: Using cached certificate for ca[0m
+[0;36mDebug: Using cached certificate for puppetnode.minsk.epam.com[0m
+[0;36mDebug: Creating new connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Using cached certificate_revocation_list for ca[0m
+[0;36mDebug: Starting connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Caching connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;32mInfo: Using configured environment 'prod'[0m
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;36mDebug: Dynamically-bound server lookup failed, falling back to server setting[0m
+[0;36mDebug: Dynamically-bound port lookup failed; falling back to masterport setting[0m
+[0;36mDebug: Failed to load library 'msgpack' for feature 'msgpack'[0m
+[0;36mDebug: Puppet::Network::Format[msgpack]: feature msgpack is missing[0m
+[0;36mDebug: file_metadata supports formats: pson yaml binary[0m
+[0;36mDebug: Using cached connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Caching connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Finishing transaction 26419560[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;36mDebug: Dynamically-bound server lookup failed, falling back to server setting[0m
+[0;36mDebug: Dynamically-bound port lookup failed; falling back to masterport setting[0m
+[0;36mDebug: Failed to load library 'msgpack' for feature 'msgpack'[0m
+[0;36mDebug: Puppet::Network::Format[msgpack]: feature msgpack is missing[0m
+[0;36mDebug: file_metadata supports formats: pson yaml binary[0m
+[0;36mDebug: Using cached connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Caching connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Finishing transaction 23788400[0m
+[0;36mDebug: Loading external facts from /opt/puppetlabs/puppet/cache/facts.d[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/root_home.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/mysql_version.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/staging_http_get.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/mysqld_version.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/puppet_vardir.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/pe_version.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/service_provider.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/mysql_server_id.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/facter_dot_d.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/package_provider.rb[0m
+[0;36mDebug: Loading facts from /opt/puppetlabs/puppet/cache/lib/facter/staging_windir.rb[0m
+[0;36mDebug: Facter: fact "facterversion" has resolved to "3.4.1".[0m
+[0;36mDebug: Facter: fact "aio_agent_version" has resolved to "1.6.2".[0m
+[0;36mDebug: Facter: searching "/opt/puppetlabs/facter/facts.d" for external facts.[0m
+[0;36mDebug: Facter: skipping external facts for "/etc/facter/facts.d": No such file or directory[0m
+[0;36mDebug: Facter: skipping external facts for "/etc/puppetlabs/facter/facts.d": No such file or directory[0m
+[0;36mDebug: Facter: searching "/opt/puppetlabs/puppet/cache/facts.d" for external facts.[0m
+[0;36mDebug: Facter: no external facts were found.[0m
+[0;36mDebug: Facter: loading all custom facts.[0m
+[0;36mDebug: Facter: searching for custom facts in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/root_home.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/mysql_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/staging_http_get.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/mysqld_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/puppet_vardir.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/pe_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/service_provider.rb.[0m
+[0;36mDebug: Facter: searching for custom fact "operatingsystem".[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: resolving operating system facts.[0m
+[0;36mDebug: Facter: resolving kernel facts.[0m
+[0;36mDebug: Facter: fact "kernel" has resolved to "Linux".[0m
+[0;36mDebug: Facter: fact "kernelrelease" has resolved to "2.6.32-573.18.1.el6.x86_64".[0m
+[0;36mDebug: Facter: fact "kernelmajversion" has resolved to "2.6".[0m
+[0;36mDebug: Facter: fact "kernelversion" has resolved to "2.6.32".[0m
+[0;36mDebug: Facter: executing command: lsb_release -a[0m
+[0;36mDebug: Facter: lsb_release was not found on the PATH.[0m
+[0;36mDebug: Facter: fact "osfamily" has resolved to "RedHat".[0m
+[0;36mDebug: Facter: fact "operatingsystemmajrelease" has resolved to "6".[0m
+[0;36mDebug: Facter: fact "operatingsystemrelease" has resolved to "6.7".[0m
+[0;36mDebug: Facter: fact "hardwaremodel" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "architecture" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "operatingsystem" has resolved to "CentOS".[0m
+[0;36mDebug: Facter: fact "selinux" has resolved to false.[0m
+[0;36mDebug: Facter: fact "os" has resolved to {
+  architecture => "x86_64",
+  family => "RedHat",
+  hardware => "x86_64",
+  name => "CentOS",
+  release => {
+    full => "6.7",
+    major => "6",
+    minor => "7"
+  },
+  selinux => {
+    enabled => false
+  }
+}.[0m
+[0;36mDebug: Facter: searching for custom fact "osfamily".[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom fact "operatingsystemrelease".[0m
+[0;36mDebug: Facter: searching for operatingsystemrelease.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystemrelease.rb in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Failed to load library 'cfpropertylist' for feature 'cfpropertylist'[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/mysql_server_id.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/facter_dot_d.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/package_provider.rb.[0m
+[0;36mDebug: Executing: '/bin/rpm --version'[0m
+[0;36mDebug: Executing: '/bin/rpm -ql rpm'[0m
+[0;36mDebug: Executing: '/bin/rpm --version'[0m
+[0;36mDebug: Executing: '/bin/rpm --version'[0m
+[0;36mDebug: Executing: '/bin/rpm --version'[0m
+[0;36mDebug: Failed to load library 'cfpropertylist' for feature 'cfpropertylist'[0m
+[0;36mDebug: Reloading pip package provider[0m
+[0;32mInfo: Facter: loading custom facts from /opt/puppetlabs/puppet/cache/lib/facter/staging_windir.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /opt/puppetlabs/puppet/cache/lib/facter.[0m
+[0;36mDebug: Facter: fact "agent_specified_environment" has resolved to "prod".[0m
+[0;36mDebug: Facter: fact "puppetversion" has resolved to "4.6.2".[0m
+[0;36mDebug: Facter: fact "pe_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "is_pe" has resolved to false.[0m
+[0;36mDebug: Facter: resolving networking facts.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip route show[0m
+[0;36mDebug: Facter: 192.168.100.0/24 dev eth1  proto kernel  scope link  src 192.168.100.118[0m
+[0;36mDebug: Facter: 10.0.2.0/24 dev eth0  proto kernel  scope link  src 10.0.2.15[0m
+[0;36mDebug: Facter: 169.254.0.0/16 dev eth0  scope link  metric 1002[0m
+[0;36mDebug: Facter: 169.254.0.0/16 dev eth1  scope link  metric 1003[0m
+[0;36mDebug: Facter: default via 10.0.2.2 dev eth0[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip -6 route show[0m
+[0;36mDebug: Facter: unreachable ::/96 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable ::ffff:0.0.0.0/96 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:a00::/24 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:7f00::/24 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:a9fe::/32 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:ac10::/28 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:c0a8::/32 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 2002:e000::/19 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: unreachable 3ffe:ffff::/32 dev lo  metric 1024  error -101 mtu 65536 advmss 65476 hoplimit 4294967295[0m
+[0;36mDebug: Facter: fe80::/64 dev eth0  proto kernel  metric 256  mtu 1500 advmss 1440 hoplimit 4294967295[0m
+[0;36mDebug: Facter: fe80::/64 dev eth1  proto kernel  metric 256  mtu 1500 advmss 1440 hoplimit 4294967295[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: hostname "puppetnode" could not be resolved: hostname may not be externally resolvable.[0m
+[0;36mDebug: Facter: searching "/var/lib/dhclient" for dhclient lease files.[0m
+[0;36mDebug: Facter: reading "/var/lib/dhclient/dhclient-eth0.leases" for dhclient lease information.[0m
+[0;36mDebug: Facter: searching "/var/lib/dhcp" for dhclient lease files.[0m
+[0;36mDebug: Facter: searching "/var/lib/dhcp3" for dhclient lease files.[0m
+[0;36mDebug: Facter: searching "/var/lib/NetworkManager" for dhclient lease files.[0m
+[0;36mDebug: Facter: searching "/var/db" for dhclient lease files.[0m
+[0;36mDebug: Facter: executing command: dhcpcd -U eth1[0m
+[0;36mDebug: Facter: dhcpcd was not found on the PATH.[0m
+[0;36mDebug: Facter: executing command: dhcpcd -U lo[0m
+[0;36mDebug: Facter: dhcpcd was not found on the PATH.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip link show eth0[0m
+[0;36mDebug: Facter: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000[0m
+[0;36mDebug: Facter: link/ether 08:00:27:b4:16:15 brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip link show eth1[0m
+[0;36mDebug: Facter: 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000[0m
+[0;36mDebug: Facter: link/ether 08:00:27:f6:e0:0d brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /sbin/ip link show lo[0m
+[0;36mDebug: Facter: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN[0m
+[0;36mDebug: Facter: link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "ipaddress_eth0" has resolved to "10.0.2.15".[0m
+[0;36mDebug: Facter: fact "ipaddress" has resolved to "10.0.2.15".[0m
+[0;36mDebug: Facter: fact "netmask_eth0" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "netmask" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "network_eth0" has resolved to "10.0.2.0".[0m
+[0;36mDebug: Facter: fact "network" has resolved to "10.0.2.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_eth0" has resolved to "fe80::a00:27ff:feb4:1615".[0m
+[0;36mDebug: Facter: fact "ipaddress6" has resolved to "fe80::a00:27ff:feb4:1615".[0m
+[0;36mDebug: Facter: fact "netmask6_eth0" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "netmask6" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "network6_eth0" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "network6" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "macaddress_eth0" has resolved to "08:00:27:b4:16:15".[0m
+[0;36mDebug: Facter: fact "macaddress" has resolved to "08:00:27:b4:16:15".[0m
+[0;36mDebug: Facter: fact "mtu_eth0" has resolved to 1500.[0m
+[0;36mDebug: Facter: fact "ipaddress_eth1" has resolved to "192.168.100.118".[0m
+[0;36mDebug: Facter: fact "netmask_eth1" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "network_eth1" has resolved to "192.168.100.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_eth1" has resolved to "fe80::a00:27ff:fef6:e00d".[0m
+[0;36mDebug: Facter: fact "netmask6_eth1" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "network6_eth1" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "macaddress_eth1" has resolved to "08:00:27:f6:e0:0d".[0m
+[0;36mDebug: Facter: fact "mtu_eth1" has resolved to 1500.[0m
+[0;36mDebug: Facter: fact "ipaddress_lo" has resolved to "127.0.0.1".[0m
+[0;36mDebug: Facter: fact "netmask_lo" has resolved to "255.0.0.0".[0m
+[0;36mDebug: Facter: fact "network_lo" has resolved to "127.0.0.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_lo" has resolved to "::1".[0m
+[0;36mDebug: Facter: fact "netmask6_lo" has resolved to "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff".[0m
+[0;36mDebug: Facter: fact "network6_lo" has resolved to "::1".[0m
+[0;36mDebug: Facter: fact "mtu_lo" has resolved to 65536.[0m
+[0;36mDebug: Facter: fact "hostname" has resolved to "puppetnode".[0m
+[0;36mDebug: Facter: fact "domain" has resolved to "minsk.epam.com".[0m
+[0;36mDebug: Facter: fact "fqdn" has resolved to "puppetnode.minsk.epam.com".[0m
+[0;36mDebug: Facter: fact "interfaces" has resolved to "eth0,eth1,lo".[0m
+[0;36mDebug: Facter: fact "dhcp_servers" has resolved to {
+  eth0 => "10.0.2.2",
+  system => "10.0.2.2"
+}.[0m
+[0;36mDebug: Facter: fact "networking" has resolved to {
+  dhcp => "10.0.2.2",
+  domain => "minsk.epam.com",
+  fqdn => "puppetnode.minsk.epam.com",
+  hostname => "puppetnode",
+  interfaces => {
+    eth0 => {
+      bindings => [
+        {
+          address => "10.0.2.15",
+          netmask => "255.255.255.0",
+          network => "10.0.2.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::a00:27ff:feb4:1615",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      dhcp => "10.0.2.2",
+      ip => "10.0.2.15",
+      ip6 => "fe80::a00:27ff:feb4:1615",
+      mac => "08:00:27:b4:16:15",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "10.0.2.0",
+      network6 => "fe80::"
+    },
+    eth1 => {
+      bindings => [
+        {
+          address => "192.168.100.118",
+          netmask => "255.255.255.0",
+          network => "192.168.100.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::a00:27ff:fef6:e00d",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      ip => "192.168.100.118",
+      ip6 => "fe80::a00:27ff:fef6:e00d",
+      mac => "08:00:27:f6:e0:0d",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "192.168.100.0",
+      network6 => "fe80::"
+    },
+    lo => {
+      bindings => [
+        {
+          address => "127.0.0.1",
+          netmask => "255.0.0.0",
+          network => "127.0.0.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "::1",
+          netmask => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          network => "::1"
+        }
+      ],
+      ip => "127.0.0.1",
+      ip6 => "::1",
+      mtu => 65536,
+      netmask => "255.0.0.0",
+      netmask6 => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      network => "127.0.0.0",
+      network6 => "::1"
+    }
+  },
+  ip => "10.0.2.15",
+  ip6 => "fe80::a00:27ff:feb4:1615",
+  mac => "08:00:27:b4:16:15",
+  mtu => 1500,
+  netmask => "255.255.255.0",
+  netmask6 => "ffff:ffff:ffff:ffff::",
+  network => "10.0.2.0",
+  network6 => "fe80::",
+  primary => "eth0"
+}.[0m
+[0;36mDebug: Facter: fact "mysql_server_id" has resolved to 10962325.[0m
+[0;36mDebug: Facter: executing command: /bin/sh -c /usr/bin/mysql --version[0m
+[0;36mDebug: Facter: /usr/bin/mysql  Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "mysql_version" has resolved to "5.1.73".[0m
+[0;36mDebug: Facter: fact "mysqld_version" resolved to null and will not be added.[0m
+[0;36mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderAix: file /usr/bin/lslpp does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderGem: file gem does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderDnf: file dnf does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portupgrade does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderTdnf: file tdnf does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swinstall does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPkgng: file /usr/local/sbin/pkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portupgrade does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[0m
+[0;36mDebug: Facter: fact "package_provider" has resolved to "yum".[0m
+[0;36mDebug: Facter: fact "pe_major_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "pe_minor_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "pe_patch_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "puppet_vardir" has resolved to "/opt/puppetlabs/puppet/cache".[0m
+[0;36mDebug: Facter: executing command: /bin/sh -c /usr/bin/getent passwd root[0m
+[0;36mDebug: Facter: root:x:0:0:root:/root:/bin/bash[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "root_home" has resolved to "/root".[0m
+[0;36mDebug: Puppet::Type::Service::ProviderInit: false value when expecting true[0m
+[0;36mDebug: Puppet::Type::Service::ProviderDebian: file /usr/sbin/update-rc.d does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderDaemontools: file /usr/bin/svc does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderRunit: file /usr/bin/sv does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderSystemd: file systemctl does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderLaunchd: file /bin/launchctl does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderGentoo: file /sbin/rc-update does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderOpenrc: file /bin/rc-status does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderOpenbsd: file /usr/sbin/rcctl does not exist[0m
+[0;36mDebug: Facter: fact "service_provider" has resolved to "redhat".[0m
+[0;36mDebug: Facter: fact "staging_http_get" has resolved to "curl".[0m
+[0;36mDebug: Facter: fact "staging_windir" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: resolving ruby facts.[0m
+[0;36mDebug: Facter: fact "rubyplatform" has resolved to "x86_64-linux".[0m
+[0;36mDebug: Facter: fact "rubysitedir" has resolved to "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0".[0m
+[0;36mDebug: Facter: fact "rubyversion" has resolved to "2.1.9".[0m
+[0;36mDebug: Facter: fact "ruby" has resolved to {
+  platform => "x86_64-linux",
+  sitedir => "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
+  version => "2.1.9"
+}.[0m
+[0;36mDebug: Facter: resolving path facts.[0m
+[0;36mDebug: Facter: fact "path" has resolved to "/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/root/bin".[0m
+[0;36mDebug: Facter: resolving EC2 facts.[0m
+[0;36mDebug: Facter: resolving virtualization facts.[0m
+[0;36mDebug: Facter: resolving desktop management interface facts.[0m
+[0;36mDebug: Facter: fact "bios_vendor" has resolved to "innotek GmbH".[0m
+[0;36mDebug: Facter: fact "bios_version" has resolved to "VirtualBox".[0m
+[0;36mDebug: Facter: fact "bios_release_date" has resolved to "12/01/2006".[0m
+[0;36mDebug: Facter: fact "boardmanufacturer" has resolved to "Oracle Corporation".[0m
+[0;36mDebug: Facter: fact "boardproductname" has resolved to "VirtualBox".[0m
+[0;36mDebug: Facter: fact "boardserialnumber" has resolved to "0".[0m
+[0;36mDebug: Facter: fact "productname" has resolved to "VirtualBox".[0m
+[0;36mDebug: Facter: fact "serialnumber" has resolved to "0".[0m
+[0;36mDebug: Facter: fact "uuid" has resolved to "8FAA834F-6480-4526-80AB-4C40D0D04F11".[0m
+[0;36mDebug: Facter: fact "chassistype" has resolved to "Other".[0m
+[0;36mDebug: Facter: fact "manufacturer" has resolved to "innotek GmbH".[0m
+[0;36mDebug: Facter: fact "dmi" has resolved to {
+  bios => {
+    release_date => "12/01/2006",
+    vendor => "innotek GmbH",
+    version => "VirtualBox"
+  },
+  board => {
+    manufacturer => "Oracle Corporation",
+    product => "VirtualBox",
+    serial_number => "0"
+  },
+  chassis => {
+    type => "Other"
+  },
+  manufacturer => "innotek GmbH",
+  product => {
+    name => "VirtualBox",
+    serial_number => "0",
+    uuid => "8FAA834F-6480-4526-80AB-4C40D0D04F11"
+  }
+}.[0m
+[0;36mDebug: Facter: executing command: /opt/puppetlabs/puppet/bin/virt-what[0m
+[0;36mDebug: Facter: kvm[0m
+[0;36mDebug: Facter: completed processing output: closing child pipes.[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "is_virtual" has resolved to true.[0m
+[0;36mDebug: Facter: fact "virtual" has resolved to "kvm".[0m
+[0;36mDebug: Facter: querying EC2 instance metadata at http://169.254.169.254/latest/meta-data/.[0m
+[0;36mDebug: Facter: requesting http://169.254.169.254/latest/meta-data/.[0m
+[0;36mDebug: Facter: Trying 169.254.169.254...[0m
+[0;36mDebug: Facter: Connection timed out after 200 milliseconds[0m
+[0;36mDebug: Facter: Closing connection 0[0m
+[0;36mDebug: Facter: EC2 facts are unavailable: not running under an EC2 instance or EC2 is not responding in a timely manner.[0m
+[0;36mDebug: Facter: resolving GCE facts.[0m
+[0;36mDebug: Facter: not running under a GCE instance.[0m
+[0;36mDebug: Facter: resolving augeas facts.[0m
+[0;36mDebug: Facter: executing command: /opt/puppetlabs/puppet/bin/augparse --version[0m
+[0;36mDebug: Facter: augparse 1.4.0 <http://augeas.net/>[0m
+[0;36mDebug: Facter: completed processing output: closing child pipes.[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "augeasversion" has resolved to "1.4.0".[0m
+[0;36mDebug: Facter: fact "augeas" has resolved to {
+  version => "1.4.0"
+}.[0m
+[0;36mDebug: Facter: resolving disk facts.[0m
+[0;36mDebug: Facter: fact "blockdevice_sda_vendor" has resolved to "ATA".[0m
+[0;36mDebug: Facter: fact "blockdevice_sda_model" has resolved to "VBOX HARDDISK".[0m
+[0;36mDebug: Facter: fact "blockdevice_sda_size" has resolved to 20971520000.[0m
+[0;36mDebug: Facter: fact "blockdevices" has resolved to "sda".[0m
+[0;36mDebug: Facter: fact "disks" has resolved to {
+  sda => {
+    model => "VBOX HARDDISK",
+    size => "19.53 GiB",
+    size_bytes => 20971520000,
+    vendor => "ATA"
+  }
+}.[0m
+[0;36mDebug: Facter: resolving processor facts.[0m
+[0;36mDebug: Facter: executing command: /bin/uname -p[0m
+[0;36mDebug: Facter: x86_64[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "hardwareisa" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "processorcount" has resolved to 1.[0m
+[0;36mDebug: Facter: fact "physicalprocessorcount" has resolved to 1.[0m
+[0;36mDebug: Facter: fact "processor0" has resolved to "Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz".[0m
+[0;36mDebug: Facter: fact "processors" has resolved to {
+  count => 1,
+  isa => "x86_64",
+  models => [
+    "Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz"
+  ],
+  physicalcount => 1
+}.[0m
+[0;36mDebug: Facter: resolving uptime facts.[0m
+[0;36mDebug: Facter: fact "uptime_seconds" has resolved to 4002.[0m
+[0;36mDebug: Facter: fact "uptime_hours" has resolved to 1.[0m
+[0;36mDebug: Facter: fact "uptime_days" has resolved to 0.[0m
+[0;36mDebug: Facter: fact "uptime" has resolved to "1:06 hours".[0m
+[0;36mDebug: Facter: fact "system_uptime" has resolved to {
+  days => 0,
+  hours => 1,
+  seconds => 4002,
+  uptime => "1:06 hours"
+}.[0m
+[0;36mDebug: Facter: resolving ssh facts.[0m
+[0;36mDebug: Facter: ssh_host_ecdsa_key.pub could not be located.[0m
+[0;36mDebug: Facter: ssh_host_ed25519_key.pub could not be located.[0m
+[0;36mDebug: Facter: fact "sshdsakey" has resolved to "AAAAB3NzaC1kc3MAAACBAI3ZZE0c4FDPHlWfayaFMkpSvd8zeTFbv2EQNP8XpODu4Ex2DUbDX1ytTfOBS6iRIq1mndRhSPvs/mykEe+Q1WaMAmB9A4FloMEccFZJJ5mo7CdlYar9VsuyE7ZC0B5L3La+Y1aNNNSSKrSe5VYP/CxcfjQKXzmhUE9lOkPZk9htAAAAFQC5FHOek/C7qFL6CbVB2OyyFnVuqwAAAIEAijl9wDu7u9zMyQuLKOcV+qp02a/FkCu74wmjhubihbTUPlQDpCHblo6nWlo6wkaFTE73s5RsIo9Le8r6h47VgzpvRRiNxalDZQesFPn4xV4oVB1IxgRTYwXGWwL9oC8KNuUPEvdA3IUMiw+nNaqH6Jkd5JyvuPiHoVEpDMiru9EAAACAUtDZyo54ud0HJIKzDmjTDT69g/eGN/ItUlxsvr/vUag8YzjbtcPXZWE57XLxbLufxMIaOn7GS/6ukexDxmlIT5qi/TcmnkrVHTJ/0HpwHhPBcIS99vuef5wYb4fPuYsmBC70iIjf92XiYo4dC5lKu9Tk8y5jX9wYFFxBcWws+Vs=".[0m
+[0;36mDebug: Facter: fact "sshfp_dsa" has resolved to "SSHFP 2 1 5196fbd7bd42958cadbfebc98c17a1e8deb19a47
+SSHFP 2 2 2695145ed46832a3c1b6c7e4f43cd2541383e80c95aea606b4a7e9c1aeab13d2".[0m
+[0;36mDebug: Facter: fact "sshrsakey" has resolved to "AAAAB3NzaC1yc2EAAAABIwAAAQEAtJhiQpULAdD00cg4dOF9wQhLti+HakCb2HPMb2Xae8W3Oj36cOIvRPHxmDeufwpWQ1t8M6/Lo+w5LBUablbODvOoYJunUU4ENg0GOAumZ5DnUuiA/+0+hZ/kb9CLRh/ISPP8sslwTZLLoTYELj1wsRJ1UO3I3qlkgWmpbm9OSfwyUWGfJAFnoQQGVmdRoU/RPM8+Fhvb4LkSNVBKiIa+fqrcDPJZBiKA+r+NgXU0NTztbIx/z4N2Ks83Gk28IcAJNFM3Bdz7xGObAQrlrXFB+iYHCudz4pC7DaEfqR3keNZ502YB0J405u7hWes2N7g+2nJMQuEvSdfsilD9+nW0Ow==".[0m
+[0;36mDebug: Facter: fact "sshfp_rsa" has resolved to "SSHFP 1 1 63726eff5d7658003328a6bb7630feb82e977c2a
+SSHFP 1 2 a6b6b16735fe632e1765baf3073daf53d81488cbe0281626a65e0fed89810ec9".[0m
+[0;36mDebug: Facter: fact "ssh" has resolved to {
+  dsa => {
+    fingerprints => {
+      sha1 => "SSHFP 2 1 5196fbd7bd42958cadbfebc98c17a1e8deb19a47",
+      sha256 => "SSHFP 2 2 2695145ed46832a3c1b6c7e4f43cd2541383e80c95aea606b4a7e9c1aeab13d2"
+    },
+    key => "AAAAB3NzaC1kc3MAAACBAI3ZZE0c4FDPHlWfayaFMkpSvd8zeTFbv2EQNP8XpODu4Ex2DUbDX1ytTfOBS6iRIq1mndRhSPvs/mykEe+Q1WaMAmB9A4FloMEccFZJJ5mo7CdlYar9VsuyE7ZC0B5L3La+Y1aNNNSSKrSe5VYP/CxcfjQKXzmhUE9lOkPZk9htAAAAFQC5FHOek/C7qFL6CbVB2OyyFnVuqwAAAIEAijl9wDu7u9zMyQuLKOcV+qp02a/FkCu74wmjhubihbTUPlQDpCHblo6nWlo6wkaFTE73s5RsIo9Le8r6h47VgzpvRRiNxalDZQesFPn4xV4oVB1IxgRTYwXGWwL9oC8KNuUPEvdA3IUMiw+nNaqH6Jkd5JyvuPiHoVEpDMiru9EAAACAUtDZyo54ud0HJIKzDmjTDT69g/eGN/ItUlxsvr/vUag8YzjbtcPXZWE57XLxbLufxMIaOn7GS/6ukexDxmlIT5qi/TcmnkrVHTJ/0HpwHhPBcIS99vuef5wYb4fPuYsmBC70iIjf92XiYo4dC5lKu9Tk8y5jX9wYFFxBcWws+Vs="
+  },
+  rsa => {
+    fingerprints => {
+      sha1 => "SSHFP 1 1 63726eff5d7658003328a6bb7630feb82e977c2a",
+      sha256 => "SSHFP 1 2 a6b6b16735fe632e1765baf3073daf53d81488cbe0281626a65e0fed89810ec9"
+    },
+    key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAtJhiQpULAdD00cg4dOF9wQhLti+HakCb2HPMb2Xae8W3Oj36cOIvRPHxmDeufwpWQ1t8M6/Lo+w5LBUablbODvOoYJunUU4ENg0GOAumZ5DnUuiA/+0+hZ/kb9CLRh/ISPP8sslwTZLLoTYELj1wsRJ1UO3I3qlkgWmpbm9OSfwyUWGfJAFnoQQGVmdRoU/RPM8+Fhvb4LkSNVBKiIa+fqrcDPJZBiKA+r+NgXU0NTztbIx/z4N2Ks83Gk28IcAJNFM3Bdz7xGObAQrlrXFB+iYHCudz4pC7DaEfqR3keNZ502YB0J405u7hWes2N7g+2nJMQuEvSdfsilD9+nW0Ow=="
+  }
+}.[0m
+[0;36mDebug: Facter: resolving id facts.[0m
+[0;36mDebug: Facter: fact "id" has resolved to "root".[0m
+[0;36mDebug: Facter: fact "gid" has resolved to "root".[0m
+[0;36mDebug: Facter: fact "identity" has resolved to {
+  gid => 0,
+  group => "root",
+  privileged => true,
+  uid => 0,
+  user => "root"
+}.[0m
+[0;36mDebug: Facter: resolving timezone facts.[0m
+[0;36mDebug: Facter: fact "timezone" has resolved to "BST".[0m
+[0;36mDebug: Facter: resolving file system facts.[0m
+[0;36mDebug: Facter: fact "mountpoints" has resolved to {
+  / => {
+    available => "16.10 GiB",
+    available_bytes => 17285734400,
+    capacity => "7.56%",
+    device => "/dev/mapper/vg_epplkraw0166t2-lv_root",
+    filesystem => "ext4",
+    options => [
+      "rw"
+    ],
+    size => "17.42 GiB",
+    size_bytes => 18699583488,
+    used => "1.32 GiB",
+    used_bytes => 1413849088
+  },
+  /boot => {
+    available => "419.97 MiB",
+    available_bytes => 440369152,
+    capacity => "11.81%",
+    device => "/dev/sda1",
+    filesystem => "ext4",
+    options => [
+      "rw"
+    ],
+    size => "476.22 MiB",
+    size_bytes => 499355648,
+    used => "56.25 MiB",
+    used_bytes => 58986496
+  }
+}.[0m
+[0;36mDebug: Facter: fact "filesystems" has resolved to "ext4,iso9660".[0m
+[0;36mDebug: Facter: fact "partitions" has resolved to {
+  /dev/mapper/vg_epplkraw0166t2-lv_root => {
+    filesystem => "ext4",
+    mount => "/",
+    size => "17.82 GiB",
+    size_bytes => 19134414848,
+    uuid => "a88027c3-aa59-45b1-ab53-2f59ea506244"
+  },
+  /dev/mapper/vg_epplkraw0166t2-lv_swap => {
+    filesystem => "swap",
+    size => "1.22 GiB",
+    size_bytes => 1308622848,
+    uuid => "5a21078a-f09c-4154-bbcc-ed8887f7dbc4"
+  },
+  /dev/sda1 => {
+    filesystem => "ext4",
+    mount => "/boot",
+    size => "500.00 MiB",
+    size_bytes => 524288000,
+    uuid => "908e54f9-2fe2-46ea-917d-651def210043"
+  },
+  /dev/sda2 => {
+    filesystem => "LVM2_member",
+    size => "19.04 GiB",
+    size_bytes => 20446183424,
+    uuid => "lBez06-lRDO-41hM-a9mL-q8bR-8VbI-l8i2kS"
+  }
+}.[0m
+[0;36mDebug: Facter: resolving memory facts.[0m
+[0;36mDebug: Facter: fact "memoryfree" has resolved to "775.61 MiB".[0m
+[0;36mDebug: Facter: fact "memoryfree_mb" has resolved to 775.609.[0m
+[0;36mDebug: Facter: fact "memorysize" has resolved to "996.26 MiB".[0m
+[0;36mDebug: Facter: fact "memorysize_mb" has resolved to 996.258.[0m
+[0;36mDebug: Facter: fact "swapfree" has resolved to "1.22 GiB".[0m
+[0;36mDebug: Facter: fact "swapfree_mb" has resolved to 1248.[0m
+[0;36mDebug: Facter: fact "swapsize" has resolved to "1.22 GiB".[0m
+[0;36mDebug: Facter: fact "swapsize_mb" has resolved to 1248.[0m
+[0;36mDebug: Facter: fact "memory" has resolved to {
+  swap => {
+    available => "1.22 GiB",
+    available_bytes => 1308618752,
+    capacity => "0%",
+    total => "1.22 GiB",
+    total_bytes => 1308618752,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  system => {
+    available => "775.61 MiB",
+    available_bytes => 813285376,
+    capacity => "22.15%",
+    total => "996.26 MiB",
+    total_bytes => 1044652032,
+    used => "220.65 MiB",
+    used_bytes => 231366656
+  }
+}.[0m
+[0;36mDebug: Facter: resolving load_average facts.[0m
+[0;36mDebug: Facter: fact "load_averages" has resolved to {
+  15m => 0.01,
+  1m => 0.08,
+  5m => 0.02
+}.[0m
+[0;36mDebug: Facter: resolving Xen facts.[0m
+[0;36mDebug: Dynamically-bound server lookup failed, falling back to server setting[0m
+[0;36mDebug: Dynamically-bound port lookup failed; falling back to masterport setting[0m
+[0;36mDebug: Failed to load library 'msgpack' for feature 'msgpack'[0m
+[0;36mDebug: Puppet::Network::Format[msgpack]: feature msgpack is missing[0m
+[0;36mDebug: catalog supports formats: pson yaml dot binary[0m
+[0;36mDebug: Using cached connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Caching connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;32mInfo: Caching catalog for puppetnode.minsk.epam.com[0m
+[0;36mDebug: Creating default schedules[0m
+[0;36mDebug: Loaded state in 0.01 seconds[0m
+[0;36mDebug: Loaded transaction store file in 0.00 seconds[0m
+[0;32mInfo: Applying configuration version '1474569132'[0m
+[0;36mDebug: /Stage[main]/T13::Nginx/Service[nginx]/require: subscribes to Package[nginx][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Config/before: subscribes to Class[Mysql::Server::Install][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Config/File[mysql-config-file]/before: subscribes to Service[mysqld][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Install/before: subscribes to Class[Mysql::Server::Binarylog][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Binarylog/before: subscribes to Class[Mysql::Server::Installdb][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Installdb/before: subscribes to Class[Mysql::Server::Service][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Installdb/File[/var/log/mysqld.log]/before: subscribes to Mysql_datadir[/var/lib/mysql][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Service/before: subscribes to Class[Mysql::Server::Root_password][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Service/Service[mysqld]/require: subscribes to Package[mysql-server][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]/require: subscribes to Service[mysqld][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Root_password/before: subscribes to Class[Mysql::Server::Providers][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Root_password/Mysql_user[root@localhost]/require: subscribes to Exec[remove install pass][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Root_password/Mysql_user[root@localhost]/before: subscribes to File[/root/.my.cnf][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Providers/before: subscribes to Anchor[mysql::server::end][0m
+[0;36mDebug: /Stage[main]/Mysql::Server/Anchor[mysql::server::start]/before: subscribes to Class[Mysql::Server::Config][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Installdb/Mysql_datadir[/var/lib/mysql]: Adding autorequire relationship with Package[mysql-server][0m
+[0;36mDebug: /Stage[main]/Mysql::Server::Root_password/Mysql_user[root@localhost]: Skipping automatic relationship with File[/root/.my.cnf][0m
+[0;36mDebug: /Stage[main]/T13::Mysql/Mysql_database[prod_mdb]: Adding autorequire relationship with File[/root/.my.cnf][0m
+[0;36mDebug: /Stage[main]/T13::Mysql/Mysql_user[prod_user@localhost]: Adding autorequire relationship with File[/root/.my.cnf][0m
+[0;36mDebug: /Stage[main]/T13::Mysql/Mysql_grant[prod_user@localhost/prod_mdb.*]: Adding autorequire relationship with File[/root/.my.cnf][0m
+[0;36mDebug: /Stage[main]/T13::Mysql/Mysql_grant[prod_user@localhost/prod_mdb.*]: Adding autorequire relationship with Mysql_user[prod_user@localhost][0m
+[0;36mDebug: Prefetching yum resources for package[0m
+[0;36mDebug: Executing: '/bin/rpm --version'[0m
+[0;36mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''[0m
+[mNotice: Nginx is installed.[0m
+[mNotice: /Stage[main]/T13::Nginx/Notify[Nginx is installed.]/message: defined 'message' as 'Nginx is installed.'[0m
+[0;36mDebug: /Stage[main]/T13::Nginx/Notify[Nginx is installed.]: The container Class[T13::Nginx] will propagate my refresh event[0m
+[0;36mDebug: Executing: '/sbin/service nginx status'[0m
+[0;36mDebug: Executing: '/sbin/chkconfig nginx'[0m
+[mNotice: Nginx is running.[0m
+[mNotice: /Stage[main]/T13::Nginx/Notify[Nginx is running.]/message: defined 'message' as 'Nginx is running.'[0m
+[0;36mDebug: /Stage[main]/T13::Nginx/Notify[Nginx is running.]: The container Class[T13::Nginx] will propagate my refresh event[0m
+[0;36mDebug: Class[T13::Nginx]: The container Stage[main] will propagate my refresh event[0m
+[0;36mDebug: Executing: '/sbin/service mysqld status'[0m
+[0;36mDebug: Executing: '/sbin/chkconfig mysqld'[0m
+[0;36mDebug: Exec[wait_for_mysql_socket_to_open](provider=posix): Executing check 'test -S /var/lib/mysql/mysql.sock'[0m
+[0;36mDebug: Executing: 'test -S /var/lib/mysql/mysql.sock'[0m
+[0;36mDebug: Exec[remove install pass](provider=posix): Executing check 'test -f /.mysql_secret'[0m
+[0;36mDebug: Executing: 'test -f /.mysql_secret'[0m
+[0;36mDebug: Prefetching mysql resources for mysql_user[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT CONCAT(User, '@',Host) AS User FROM mysql.user'[0m
+[0;36mDebug: Executing: '/usr/libexec/mysqld -V'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT MAX_USER_CONNECTIONS, MAX_CONNECTIONS, MAX_QUESTIONS, MAX_UPDATES, PASSWORD /*!50508 , PLUGIN */ FROM mysql.user WHERE CONCAT(user, '@', host) = 'root@127.0.0.1''[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT MAX_USER_CONNECTIONS, MAX_CONNECTIONS, MAX_QUESTIONS, MAX_UPDATES, PASSWORD /*!50508 , PLUGIN */ FROM mysql.user WHERE CONCAT(user, '@', host) = '@localhost''[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT MAX_USER_CONNECTIONS, MAX_CONNECTIONS, MAX_QUESTIONS, MAX_UPDATES, PASSWORD /*!50508 , PLUGIN */ FROM mysql.user WHERE CONCAT(user, '@', host) = 'prod_user@localhost''[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT MAX_USER_CONNECTIONS, MAX_CONNECTIONS, MAX_QUESTIONS, MAX_UPDATES, PASSWORD /*!50508 , PLUGIN */ FROM mysql.user WHERE CONCAT(user, '@', host) = 'root@localhost''[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT MAX_USER_CONNECTIONS, MAX_CONNECTIONS, MAX_QUESTIONS, MAX_UPDATES, PASSWORD /*!50508 , PLUGIN */ FROM mysql.user WHERE CONCAT(user, '@', host) = '@puppetnode''[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT MAX_USER_CONNECTIONS, MAX_CONNECTIONS, MAX_QUESTIONS, MAX_UPDATES, PASSWORD /*!50508 , PLUGIN */ FROM mysql.user WHERE CONCAT(user, '@', host) = 'root@puppetnode''[0m
+[0;36mDebug: Prefetching mysql resources for mysql_database[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe show databases'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe show variables like '%_database' information_schema'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe show variables like '%_database' mysql'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe show variables like '%_database' prod_mdb'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe show variables like '%_database' test'[0m
+[0;36mDebug: Prefetching mysql resources for mysql_grant[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT CONCAT(User, '@',Host) AS User FROM mysql.user'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SHOW GRANTS FOR 'root'@'127.0.0.1';'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SHOW GRANTS FOR 'prod_user'@'localhost';'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SHOW GRANTS FOR 'root'@'localhost';'[0m
+[0;36mDebug: Executing: '/usr/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SHOW GRANTS FOR 'root'@'puppetnode';'[0m
+[0;36mDebug: Finishing transaction 25151880[0m
+[0;36mDebug: Storing state[0m
+[0;36mDebug: Stored state in 0.02 seconds[0m
+[mNotice: Applied catalog in 0.38 seconds[0m
+[0;36mDebug: Dynamically-bound server lookup failed, falling back to report_server setting[0m
+[0;36mDebug: Dynamically-bound port lookup failed; falling back to report_port setting[0m
+[0;36mDebug: Using cached connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Caching connection for https://puppetserver.minsk.epam.com:8140[0m
+[0;36mDebug: Closing connection for https://puppetserver.minsk.epam.com:8140[0m
